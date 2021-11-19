@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css"/>
+    <title>GoPet - Fale conosco</title>
+</head>
+<body>
+    <div class= "grid">
+    <header>
+        <nav>
+            <a class="logo" href="/">GoPet</a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="index.html">INÍCIO</a></li>
+                <li><a href="whoweare.html">QUEM SOMOS</a></li>
+                <li><a href="passageiro.html">PASSAGEIRO</a></li>
+                <li><a href="motorista.html">MOTORISTA</a></li>
+                <li><a href="faq.html">AJUDA</a></li>
+                <li><a href="recommendations.html">RECOMENDAÇÕES</a></li>
+                <li><a href="faleconosco.html">FALE CONOSCO</a></li>
+                <li><a href="calladriver.html">PEDIR CORRIDA</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class= "text">
+        <h1>
+            Fale conosco
+        </h1>
+
+        <div class= "inputsFaleConosco">
+            <form>
+                <label for="name">Nome*:</label>
+                <input type="text" id="name" name="name">
+            </form>
+            <br>
+            <form>
+            <label for="email">E-mail*:</label>
+                <input type="text" id="email" name="email">
+            </form>
+            <br>
+            <form>
+                <label for="message">Mensagem*:</label>
+                <textarea id="message" type="text"></textarea>
+              </form>
+              
+        </div>
+        <div>
+            <input id="buttonFaleConosco" onclick="faleConosco()" type="button" value="Enviar">
+        </div>   
+    </div>
+    <div class= "photos">
+         <img src="assets/img/faleconosco.jpg" class="photoLateral" id="photoLateral">   
+    </div>
+
+    <footer>
+        <div class="links_section">
+                <ul>
+                    <li>
+                        <a href="index.html">Início</a>
+                    </li>
+                    <li>
+                        <a href="whoweare.html">Quem somos</a>
+                    </li>
+                    <li>
+                        <a href="faleconosco.html">Fale conosco</a>
+                    </li>
+                    <li>
+                        <a href="faq.html">Ajuda</a>
+                    </li>
+                </ul>
+        </div>
+
+    </footer>
+
+    </div>
+    <script type="text/javascript" src="mobile-navbar.js"></script>
+    <script type="text/javascript" src="script-faleconosco.js"></script>
+</body>
+</html>
