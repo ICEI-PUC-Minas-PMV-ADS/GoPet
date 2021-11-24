@@ -1,4 +1,4 @@
-let userLogado = JSON.parse(localStorage.getItem('userLogadoM')) 
+let userLogado = JSON.parse(sessionStorage.getItem('userLogadoM')) 
 
 if(sessionStorage.getItem('tokenM') == null && userLogado == null){
     alert('Você deve fazer login para acessar esta página!')
