@@ -139,33 +139,13 @@ function loginDriver(){
         errorMsg2.innerHTML = ''
         
         let tokenM = Math.random().toString(16).substr(2) + Math.random().toString(16).substr(2)
-        sessionStorage.setItem('tokenM', tokenM)
+        localStorage.setItem('tokenM', tokenM)
 
-        sessionStorage.setItem('userLogadoM', JSON.stringify(userValidDriver))
+        localStorage.setItem('userLogadoM', JSON.stringify(userValidDriver))
 
     }else{
         errorMsg2.setAttribute('style', 'display:block')
         errorMsg2.innerHTML = '<strong>O e-mail e/ou a senha estão incorretos</strong>'
         usernameDriver.focus()
     }
-}
-
-function recuperarSenha(){
-    let modal = document.querySelector('.modal')
-    modal.style.display = 'block';
-}
-
-function fechar(){
-    let modal = document.querySelector('.modal')
-    modal.style.display = 'none';
-}
-
-function recuperarSenha2(){
-    let modal2 = document.querySelector('.modal2')
-    modal2.style.display = 'block';
-}
-
-function fechar2(){
-    let modal2 = document.querySelector('.modal2')
-    modal2.style.display = 'none';
 }
