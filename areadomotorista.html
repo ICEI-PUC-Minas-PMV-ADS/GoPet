@@ -14,7 +14,7 @@
     <div class="wrapper">
         <header>
             <nav>
-                <a class="logo" href="index.html">GoPet</a>
+                <a class="logo" href="/">GoPet</a>
                 <div class="mobile-menu">
                     <div class="line1"></div>
                     <div class="line2"></div>
@@ -34,13 +34,13 @@
         </header>
 
         <div class="title">
-            <h1 id="title"></h1>
+            <h1>Olá, Motorista</h1>
             <div id="errorMsg"></div>
             <div id="successMsg"></div>
         </div>
 
         <div class="photos">
-            <img src="assets/img/agostinho.jpg" class="photoCadastro" id="photoCadastro"
+            <img src="assets/img/tutor.png" class="photoCadastro" id="photoCadastro"
                 alt="Selecione a foto do motorista"><br><br>
             <input class="form-control" type="file" id="flImage" accept="image/*">
         </div>
@@ -50,6 +50,12 @@
                 <div class="form-dados">
                     <label id="labelName" for="nome">Nome completo*</label><br>
                     <input class="form-control" type="text" id="name" name="username" required>
+                    <br>
+                </div>
+                <br>
+                <div class="form-check">
+                    <label id="labelGender" for="gender">Gênero*</label><br>
+                    <input class="form-control" type="text" id="gender" name="gender" disabled>
                     <br>
                 </div>
                 <br>
@@ -152,9 +158,10 @@
                     <div class="form-dados">
                         <label id="labelCapacity" for="listaPorte">Porte do animal que tem capacidade de transportar*</label><br>
                         <select id="capacity" name="capacity" class="form-control" aria-label="Porte do animal" required>
-                            <option selected class="form-dados">Grande</option>
+                            <option selected class="form-dados">Escolha uma opção</option>
                             <option value="1">Pequeno</option>
                             <option value="2">Médio</option>
+                            <option value="3">Grande</option>
                         </select>
                     </div>
                 </div>

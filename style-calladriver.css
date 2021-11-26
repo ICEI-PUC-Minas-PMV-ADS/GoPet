@@ -14,7 +14,7 @@
 
 @media (max-width: 600px) {
     .inputCallADriver {
-        width: 92%;
+        width: 95%;
         font-family: Arial, Helvetica, sans-serif;
         color:#4F4F4F;
     }
@@ -89,12 +89,6 @@
     color: #4f4f4f;
 }
 
-@media(max-width:600px) {
-    .inputSelect {
-        width: 92%;
-    }
-}
-
 .inputSection input::placeholder {
     color: rgb(165, 170, 164);
 }
@@ -167,6 +161,11 @@
     }
 }
 
+.petMap {
+    margin: 16px 0 30px 10px;
+    background-color: #FFFAFA;
+}
+
 .selectPets > div {
     display: flex;
     flex: 1;
@@ -185,13 +184,6 @@
     justify-content: flex-end;
 } 
 
-
-@media (max-width: 600px) {
-    .container_right {
-        padding-right: 30px;
-    }
-}
-
 #petImage{
     width: 100%; 
 }
@@ -200,16 +192,16 @@
     display: flex;
 }
 
-/* @media (max-width: 600px) {
+@media (max-width: 600px) {
     .where-you-want-to-go-label {
         display: none !important;
     }
-} */
+}
 
 .links_section, .social_media {
+    padding: 40px;
     display: flex;
     flex: 1;
-    /* margin-top: 15px; */
 }
 
 .links_section > :nth-child(1) {
@@ -223,7 +215,7 @@
 }
 
 .links_section > div > ul > li > a {
-    font-size: 13px;
+    font-size: 21px;
     padding: 8px;
     color: white;
 }
@@ -243,8 +235,7 @@ footer > div {
     width: 100%;
     flex-direction: row;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    /* margin-left: 10vh; */
-    padding: 20px;
+    
 }
 
 li {

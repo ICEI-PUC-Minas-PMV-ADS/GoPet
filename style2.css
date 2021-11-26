@@ -384,15 +384,4 @@ section {
         list-style: none;
     }
 
-    .faleConosco > p{
-        margin-left: 30px;
-    }
 
-    .faleConosco > p > a{
-        color: #4169E1;
-        font-weight: bold;
-        cursor: pointer;
-    }
-    .faleConosco > p > a:hover{
-        color: #4f4f4f;
-    }
