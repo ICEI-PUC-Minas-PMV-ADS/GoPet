@@ -57,6 +57,7 @@ let validPassword = false
 let confirmPassword = document.querySelector('#confirmPassword')
 let labelConfirm = document.querySelector('#labelConfirm')
 let validConfirm = false
+let gender = document.querySelector('input[name=gender]')
 
 
 names.addEventListener('keyup', ()=>{
@@ -214,51 +215,57 @@ confirmPassword.addEventListener('keyup', ()=>{
 })
 
 
+// getGender.addEventListener('onChange', () => {
+//     console.log('gender value', getGender)
+// })
+
+
 
 function cadastrarTutor(){
-    if(validName && validBirthday && validEmail && validCpf && validCep && validAddress &&
-        validNumber && validNeighborhood && validCity && validState && validCellphone && validPassword && validConfirm){
+    console.log('gender value', gender.value)
+    // if(validName && validBirthday && validEmail && validCpf && validCep && validAddress &&
+    //     validNumber && validNeighborhood && validCity && validState && validCellphone && validPassword && validConfirm){
 
-            let userListTutor = JSON.parse(localStorage.getItem('userListTutor') || '[]')
+    //         let userListTutor = JSON.parse(localStorage.getItem('userListTutor') || '[]')
 
-            userListTutor.push(
-                {
-                    nameCad: names.value,
-                    /*genderCad: gender.value,*/
-                    birthdayCad: birthday.value,
-                    emailCad: email.value,
-                    cpfCad: cpf.value,
-                    cepCad: cep.value,
-                    addressCad: address.value,
-                    houseNumberCad: houseNumber.value,
-                    complementCad: complement.value,
-                    neighborhoodCad: neighborhood.value,
-                    cityCad: city.value,
-                    stateCad: state.value,
-                    cellphoneCad: cellphone.value,
-                    passwordCad: password.value,
-                    confirmPasswordCad: confirmPassword.value
-                }
-            )
+    //         userListTutor.push(
+    //             {
+    //                 nameCad: names.value,
+    //                 /*genderCad: gender.value,*/
+    //                 birthdayCad: birthday.value,
+    //                 emailCad: email.value,
+    //                 cpfCad: cpf.value,
+    //                 cepCad: cep.value,
+    //                 addressCad: address.value,
+    //                 houseNumberCad: houseNumber.value,
+    //                 complementCad: complement.value,
+    //                 neighborhoodCad: neighborhood.value,
+    //                 cityCad: city.value,
+    //                 stateCad: state.value,
+    //                 cellphoneCad: cellphone.value,
+    //                 passwordCad: password.value,
+    //                 confirmPasswordCad: confirmPassword.value
+    //             }
+    //         )
 
-            localStorage.setItem('userListTutor', JSON.stringify(userListTutor))
+    //         localStorage.setItem('userListTutor', JSON.stringify(userListTutor))
             
             
-            successMsg.setAttribute('style', 'display:block')
-            successMsg.innerHTML = '<strong>O usuário está sendo cadastrado...</strong>'
-            errorMsg.setAttribute('style', 'display:none')
-            errorMsg.innerHTML = ''
+    //         successMsg.setAttribute('style', 'display:block')
+    //         successMsg.innerHTML = '<strong>O usuário está sendo cadastrado...</strong>'
+    //         errorMsg.setAttribute('style', 'display:none')
+    //         errorMsg.innerHTML = ''
 
-            window.scrollTo(0, 0);
+    //         window.scrollTo(0, 0);
 
-            setTimeout(()=>{
-                window.location.href = 'index.html'
-            }, 3000)
-    }else{
-        errorMsg.setAttribute('style', 'display:block')
-        errorMsg.innerHTML = '<strong>Preencha corretamente todos os campos obrigatórios para se cadastrar</strong>'
-        successMsg.innerHTML = ''
-        successMsg.setAttribute('style', 'display:none')
-        window.scrollTo(0, 0);
-    }
+    //         setTimeout(()=>{
+    //             window.location.href = 'index.html'
+    //         }, 3000)
+    // }else{
+    //     errorMsg.setAttribute('style', 'display:block')
+    //     errorMsg.innerHTML = '<strong>Preencha corretamente todos os campos obrigatórios para se cadastrar</strong>'
+    //     successMsg.innerHTML = ''
+    //     successMsg.setAttribute('style', 'display:none')
+    //     window.scrollTo(0, 0);
+    // }
 }

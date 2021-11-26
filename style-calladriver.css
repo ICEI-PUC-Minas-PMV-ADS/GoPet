@@ -167,6 +167,11 @@
     }
 }
 
+.petMap {
+    margin: 16px 0 30px 10px;
+    background-color: #FFFAFA;
+}
+
 .selectPets > div {
     display: flex;
     flex: 1;

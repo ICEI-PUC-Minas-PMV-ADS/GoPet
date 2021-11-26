@@ -1,13 +1,9 @@
-let userLogado = JSON.parse(sessionStorage.getItem('userLogadoP')) 
+let userLogado = JSON.parse(localStorage.getItem('userLogadoP')) 
 
-if (sessionStorage.getItem('tokenP') == null && userLogado == null){
+if (localStorage.getItem('tokenP') == null && userLogado == null){
     alert('Você deve fazer login para acessar esta página!')
     window.location.href = 'index.html'
     }else{
-
-    let ola = document.getElementById("title")
-
-    ola.innerHTML = "Olá, " + userLogado.nome;
     document.getElementById("name").value = userLogado.nome;
     document.getElementById("email").value = userLogado.user;
     document.getElementById("birthday").value = userLogado.dataNascimento;
@@ -27,13 +23,17 @@ if (sessionStorage.getItem('tokenP') == null && userLogado == null){
 }
 
 function sair(){
-    sessionStorage.removeItem('tokenP')
+    localStorage.removeItem('tokenP')
     window.location.href = 'index.html'
-    sessionStorage.removeItem('userLogadoP')
+    localStorage.removeItem('userLogadoP')
 }
 
 function salvarAlteracoes(){
-    sessionStorage.removeItem('userLogadoP')
+    localStorage.removeItem('userLogadoP')
     alert('Os dados foram alterados com sucesso!')
 }
 
+$(window).unload(function(){
+    localStorage.removeItem('tokenP')
+    localStorage.removeItem('userLogadoP')
+})

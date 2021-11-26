@@ -14,7 +14,7 @@
     <div class="wrapper">
         <header>
             <nav>
-                <a class="logo" href="index.html">GoPet</a>
+                <a class="logo" href="/">GoPet</a>
                 <div class="mobile-menu">
                     <div class="line1"></div>
                     <div class="line2"></div>
@@ -34,13 +34,13 @@
         </header>
 
         <div class="title">
-            <h1 id="title"></h1><br>
+            <h1>Olá, Tutor(a)</h1><br>
             <div id="errorMsg"></div>
             <div id="successMsg"></div>
         </div>
 
         <div class="photos">
-            <img src="assets/img/perfiltutor.JPG" class="photoCadastro" id=photoCadastro
+            <img src="assets/img/tutor.png" class="photoCadastro" id=photoCadastro
                 alt="Selecione a foto do tutor"><br><br>
             <input class="form-control" type="file" id="flImage" accept="image/*">
         </div>
@@ -53,6 +53,13 @@
                     <br>
                 </div>
                 <br>
+
+                <div class="form-check">
+                    <label id="labelGender" for="gender">Gênero*</label><br>
+                    <input class="form-control" type="text" id="gender" name="gender" disabled>
+                    <br>
+                </div>
+
                 <div class="form-dados">
                     <label id="labelBirthday" for="birthday">Data de nascimento*</label><br>
                     <input class="form-control" type="date" id="birthday" name="bdate" placeholder="__/__/____"
