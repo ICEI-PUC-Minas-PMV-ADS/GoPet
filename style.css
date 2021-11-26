@@ -27,13 +27,13 @@ body {
     font-family: Arial;
 }
 
-.formCadastro label {
+form label {
     color: #4F4F4F;
     font-family: Arial, Helvetica, sans-serif;
     font-size: smaller;
 }
 
-.botaoEnviar, .botaoSair, .botaoSalvar, .botaoPet{
+.botao-enviar{
     height: 25px;
     background-color: #FF9052;
     color:white;
@@ -42,12 +42,10 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: .3s;
-    width: 120px;
 }
 
-.botaoEnviar:hover, .botaoSair:hover, .botaoSalvar:hover, .botaoPet:hover{
+.botao-enviar:hover{
     background-color: orangered;
-    color: white;
 }
 
 .wrapper{
@@ -103,13 +101,12 @@ body {
 
 .photos{
     grid-area: photo;
-    margin-top: 18%;
 }
 
 .contentRegistration{
     grid-area: form;
     padding: 0% 10%;
-    margin-top: 8%;
+    margin-top: 5%;
     margin-bottom: 8%;
 }
 
@@ -254,7 +251,7 @@ header{
         display: flex;
         justify-content: center;
         width: 100%;
-        margin-top: 70px;
+        margin-top: 100px;
         grid-area: loginArea;
     }
     
@@ -430,7 +427,6 @@ header{
             justify-content: center;
             width: 100%;
             grid-area: loginArea;
-            margin-top: 20px;
         }
     }
 
@@ -457,231 +453,5 @@ header{
         color:#FFFAFA;
     }
 
-    #errorMsg, #errorMsg2{
-        text-align: center;
-        color: #ff0000;
-        background-color: #ffbbbb;
-        padding: 15px;
-        border-radius: 4px;
-        display: none;
-        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    }
 
-
-    #successMsg{
-        text-align: center;
-        color: #00bb00;
-        background-color: #bbffbe;
-        padding: 15px;
-        border-radius: 4px;
-        display: none;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    #photoLateral {
-        width: 280px;
-        height: 400px;
-    }
-
-    .text > h1 { 
-        padding: 20px;
-        font-size: x-large;
-        font-family: Arial;  
-        color: #4f4f4f
-    }
     
-    .text {
-        grid-column: form;
-        max-width: 100%;
-        align-items: center;   
-    }
-
-    .inputsFaleConosco {
-        padding: 0 20px;
-        font-size: 15px;
-        font-family: Arial;
-        align-items: center;
-        color: #4f4f4f;
-    }
-
-    #buttonFaleConosco {
-        background-color: #FF9052;
-        border-radius: 4px;
-        border: none;
-        color: white;
-        margin: 10px 20px;
-        width:100px;
-        height:40px;
-        cursor: pointer;
-        text-align: center;      
-    }
-
-    #buttonFaleConosco:hover{
-        background-color: orange;
-        color: white;
-    }
-
-    .fotoMotorista{
-        width: 100%;
-        color: #976DD0;
-        font-weight: bold;
-        font-size: large;
-        display: inline-flex;
-        flex-wrap: wrap;
-        justify-content:space-evenly;
-        align-items: center;
-        background-color: transparent;
-        border-radius: 4%;
-        box-shadow: 3px 3px 3px 3px #00000060;
-        
-    }
-
-    .mensagem > textarea{
-        border-radius: 10px;
-        width: 100%;
-    }
-
-    .fotoM{
-        width: 20%;
-        height: 20%;
-        margin-top: 5%;
-        margin-bottom: 5%;
-        border-radius: 10px;
-        border-color: #FF9052;
-        border-style:solid;
-        border-width: 4px;
-        cursor: pointer;
-    }
-
-    @media (max-width: 700px){
-        .fotoM{
-            width: 100px;
-            height: 100px;
-        }
-        .fotoMotorista{
-            align-items:unset;
-        }
-        #mapaCorrida{
-           width: 100%;
-        }
-    }
-    
-    .mapa{
-        text-align: center;
-        margin-bottom: 10%;
-    }
-
-    .mapa > h1{
-        padding: 3%;
-        font-family: Arial, Helvetica, sans-serif;
-        color: #4F4F4F;
-        font-size: 35px;
-    }
-
-    .nomeM > label{
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: small;
-    }
-
-/* modal Recuperar Senha*/
-
-.modal, .modal2{
-    width: 40%;
-    background-color: #4F4F4F;
-    border-radius: 5px;
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    display: none;
-    animation: animate;
-    animation-duration: 800ms;
-}
-
-.reset-senha > p > a{
-    cursor: pointer;
-}
-
-@keyframes animate{
-    from{opacity: 1;}
-    from{opacity: 0;}
-}
-
-.fechar{
-    width: 30px;
-    height: 30px;
-    background-color: #976DD0;
-    border-radius: 50%;
-    float: right;
-    margin-top: 1%;
-    margin-right: 1%;
-    cursor:pointer;
-}
-
-.fechar:hover{
-    background-color: purple;
-}
-
-.labelX{
-    position: relative;
-    left:36%;
-    top:16%;
-    color: #FFFAFA;
-    font-family: Arial, Helvetica, sans-serif;
-    cursor: pointer;
-}
-
-.textoRecuperar{
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    margin-top: 3%;
-    margin-left: 5%;
-    margin-right: 5%;
-    float: left;
-    font-size: small;
-}
-
-#recuperarSenha{
-    float: left;
-    width: 50%;
-    margin-top: 5%;
-    margin-left: 25%;
-}
-
-.botaoEnviarEmail{
-    background-color: #976DD0;
-    border: none;
-    border-radius: 3px;
-    color: #FFFAFA;
-    margin-top: 8%;
-    margin-bottom: 5%;
-}
-
-.botaoEnviarEmail:hover{
-    background-color: purple;
-    color: #FFFAFA;
-    transition: .3s;
-}
-
-.botaoEmail{
-    text-align: center;
-}
-
-.modal > label, .modal2 > label{
-    text-align: center;
-}
-
-@media (max-width: 700px){
-    .modal, .modal2{
-        width:80%;
-    }
-}
-
-@media(min-width: 1200px){
-    .botaoEmail{
-        margin-top: 12%;
-    }
-    .botaoEnviarEmail{
-        margin-top: 2%;
-    }
-}

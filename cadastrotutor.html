@@ -14,7 +14,7 @@
     <div class="wrapper">
         <header>
             <nav>
-                <a class="logo" href="index.html">GoPet</a>
+                <a class="logo" href="/">GoPet</a>
                 <div class="mobile-menu">
                     <div class="line1"></div>
                     <div class="line2"></div>
@@ -22,21 +22,19 @@
                 </div>
                 <ul class="nav-list">
                     <li><a href="index.html">INÍCIO</a></li>
-                    <li><a href="whoweare.html">QUEM SOMOS</a></li>
-                    <li><a href="passageiro.html">PASSAGEIRO</a></li>
-                    <li><a href="motorista.html">MOTORISTA</a></li>
-                    <li><a href="faq.html">AJUDA</a></li>
-                    <li><a href="recommendations.html">RECOMENDAÇÕES</a></li>
-                    <li><a href="faleconosco.html">FALE CONOSCO</a></li>
+                    <li><a href="#">QUEM SOMOS</a></li>
+                    <li><a href="#">PASSAGEIRO</a></li>
+                    <li><a href="#">MOTORISTA</a></li>
+                    <li><a href="#">AJUDA</a></li>
+                    <li><a href="#">RECOMENDAÇÕES</a></li>
+                    <li><a href="#">FALE CONOSCO</a></li>
                     <li><a href="calladriver.html">PEDIR CORRIDA</a></li>
                 </ul>
             </nav>
         </header>
 
         <div class="title">
-            <h1>Cadastro do(a) Tutor(a)</h1><br>
-            <div id="errorMsg"></div>
-            <div id="successMsg"></div>
+            <h1>Cadastro do(a) Tutor(a)</h1>
         </div>
 
         <div class="photos">
@@ -46,110 +44,111 @@
         </div>
 
         <div class="contentRegistration">
-            <div class="formCadastro" name="cadastroTutor" id="registrationForm">
+            <form class="form-cadastro needs-validation" name="cadastro-tutor" id="registrationForm"
+                action="do-cadastro-tutor.html" method="POST">
                 <div class="form-dados">
-                    <label id="labelName" for="nome">Nome completo*</label><br>
-                    <input class="form-control" type="text" id="name" name="username" required>
+                    <label for="nome">Nome completo</label><br>
+                    <input class="form-control" type="text" id="name" name="user_name" required>
                     <br>
                 </div>
                 <br>
 
                 <div class="form-check">
-                    <label id="labelGender" for="gender">Gênero</label><br>
-                    <input class="form-check-input" name="gender" type="radio" id="feminino" required>
-                    <label class="form-check-label" for="feminino">Feminino</label>
+                    <label for="genero">Gênero</label><br>
+                    <input class="form-check-input" name="option" type="radio" id="flexRadio1" required>
+                    <label class="form-check-label" for="flexRadio1">Feminino</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" name="gender" type="radio" id="masculino" required>
-                    <label class="form-check-label" for="masculino">Masculino</label>
+                    <input class="form-check-input" name="option" type="radio" id="flexRadio2" required>
+                    <label class="form-check-label" for="flexRadio2">Masculino</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" name="gender" type="radio" id="naoInformar" required>
-                    <label class="form-check-label" for="masculino">Não informar</label>
+                    <input class="form-check-input" name="option" type="radio" id="flexRadio3" required>
+                    <label class="form-check-label" for="flexRadio3">Não informar</label>
                 </div>
                 <br>
                 <div class="form-dados">
-                    <label id="labelBirthday" for="birthday">Data de nascimento*</label><br>
-                    <input class="form-control" type="date" id="birthday" name="bdate" placeholder="__/__/____"
+                    <label for="data-de-nascimento">Data de nascimento</label><br>
+                    <input class="form-control" type="date" id="birthdayDate" name="bdate" placeholder="__/__/____"
                         required>
                 </div>
                 <br>
                 <div class="form-dados">
-                    <label id="labelEmail" for="email">E-mail*</label><br>
-                    <input class="form-control" type="email" id="email" name="email" placeholder="exemplo@gopet.com.br"
+                    <label for="email">E-mail</label><br>
+                    <input class="form-control" type="email" id="email" name="email" placeholder="exemplo@petvai.com.br"
                         required>
                 </div>
                 <br>
                 <div class="form-dados">
-                    <label id="labelCpf" for="CPF">CPF*</label><br>
+                    <label for="CPF">CPF</label><br>
                     <input class="form-control" type="number" id="CPF" name="cpf" placeholder="___.___.___-__" required>
                 </div>
                 <br>
                 <div class="form-dados">
-                    <label id="labelCep" for="CEP">CEP*</label><br>
+                    <label for="CEP">CEP</label><br>
                     <input class="form-control" type="number" id="CEP" name="cep" placeholder="_____-___" required>
                 </div>
                 <br>
                 <div class="form-dados">
-                    <label id="labelAddress" for="logradouro">Logradouro*</label><br>
+                    <label for="logradouro">Logradouro</label><br>
                     <input class="form-control" type="text" id="address" name="address" required>
                 </div>
                 <br>
                 <div class="form-dados">
-                    <label id="labelNumber" for="numero-casa">Número*</label><br>
+                    <label for="numero-casa">Número</label><br>
                     <input class="form-control" type="number" id="houseNumber" name="housenumber" required>
                 </div>
                 <br>
                 <div class="form-dados">
-                    <label id="labelComplement" for="complemento">Complemento</label><br>
+                    <label for="complemento">Complemento</label><br>
                     <input class="form-control" type="text" id="complement" name="complement">
                 </div>
                 <br>
                 <div class="form-dados">
-                    <label id="labelNeighborhood" for="bairro">Bairro*</label><br>
+                    <label for="bairro">Bairro</label><br>
                     <input class="form-control" type="text" id="neighborhood" name="neighborhood" required>
                 </div>
                 <br>
                 <div class="form-dados">
-                    <label id="labelCity" for="cidade">Cidade*</label><br>
+                    <label for="cidade">Cidade</label><br>
                     <input class="form-control" type="text" id="city" name="city" required>
                 </div>
                 <br>
                 <div class="form-dados">
-                    <label id="labelState" for="estado">Estado (sigla)*</label><br>
+                    <label for="estado">Estado</label><br>
                     <input class="form-control" type="text" id="state" name="state" required>
                 </div>
                 <br>
                 <div class="form-dados">
-                    <label id="labelCellphone" for="celular">Celular com DDD*</label><br>
-                    <input class="form-control" type="number" id="cellphone" name="cellphone" required>
+                    <label for="celular">Celular</label><br>
+                    <input class="form-control" type="number" id="cellphone" name="cellphone"
+                        placeholder="(__) _____-___" required>
                 </div>
                 <br>
                 <div class="form-dados">
-                    <label id="labelPassword" for="password">Senha*</label><br>
+                    <label for="password">Senha</label><br>
                     <input class="form-control" type="password" id="password" name="password"
                         aria-describedby="senhaaux" required>
                     <i class="fa fa-eye" aria-hidden="true"></i>
                 </div>
                 <div class="form-dados">
                     <span class="form-text-aux" id="senhaaux">
-                        A senha deve ter no mínimo 8 caracteres.
+                        A senha deve ter de 8 a 20 caracteres.
                     </span>
                 </div>
                 <br>
                 <div class="form-dados">
-                    <label id="labelConfirm" for="confirmPassword">Confirmar senha*</label><br>
+                    <label for="confirmPassword">Confirmar Senha</label><br>
                     <input class="form-control" type="password" id="confirmPassword" name="confirmPassword"
                         aria-describedby="senhaaux" required>
                     <i id="passwordView" class="fa fa-eye" aria-hidden="true"></i>
                 </div>
                 <br>
                 <div class="botoes">
-                    <button onclick='cadastrarTutor()' href ="index.html" class="botaoEnviar" id="submitButtonTutor" 
-                    type="submit">Finalizar cadastro</button>
+                    <button onclick='cadastrar()' class="botao-enviar" id="submitButtonTutor" type="submit">Finalizar cadastro</button>
                 </div>
                 <br><br>
-            </div>
+            </form>
         </div>
         <footer>
             <div class="links_section">
@@ -159,13 +158,24 @@
                             <a href="index.html">Início</a>
                         </li>
                         <li>
-                            <a href="whoweare.html">Quem somos</a>
+                            <a href="#">Quem somos</a>
                         </li>
                         <li>
-                            <a href="faleconosco.html">Fale conosco</a>
+                            <a href="#">Fale conosco</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <ul>
+                        <li>
+                            <a href="#">Termos e Condições</a>
                         </li>
                         <li>
-                            <a href="faq.html">Ajuda</a>
+                            <a href="#">Políticas de privacidade</a>
+                        </li>
+                        <li>
+                            <a href="#">Ajuda</a>
                         </li>
                     </ul>
                 </div>
@@ -176,7 +186,6 @@
     </div>
     <script type="text/javascript" src="script-registration.js"></script>
     <script type="text/javascript" src="mobile-navbar.js"></script>
-    <script type="text/javascript" src="script-cadastrarTutor.js"></script>
 </body>
 
 </html>

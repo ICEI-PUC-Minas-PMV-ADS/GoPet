@@ -4,8 +4,6 @@
 
 let photo = document.getElementById("photoCadastro");
 let file = document.getElementById("flImage");
-let btnPassword = document.querySelector(".fa-eye")
-let btnConfirm = document.querySelector("#passwordView")
 
 file.addEventListener('change', (event) => {
     
@@ -20,6 +18,8 @@ file.addEventListener('change', (event) => {
 
 // Visualizador de senha cadastro
 
+let btnPassword = document.querySelector(".fa-eye")
+
 btnPassword.addEventListener('click', () =>{
 
     let inputPassword = document.querySelector("#password")
@@ -32,6 +32,8 @@ btnPassword.addEventListener('click', () =>{
 )
 
 // Visualizador de confirmar a senha
+
+let btnConfirm = document.querySelector("#passwordView")
 
 btnConfirm.addEventListener('click', () =>{
 
