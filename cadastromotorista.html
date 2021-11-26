@@ -14,7 +14,7 @@
     <div class="wrapper">
         <header>
             <nav>
-                <a class="logo" href="index.html">GoPet</a>
+                <a class="logo" href="/">GoPet</a>
                 <div class="mobile-menu">
                     <div class="line1"></div>
                     <div class="line2"></div>
@@ -22,12 +22,12 @@
                 </div>
                 <ul class="nav-list">
                     <li><a href="index.html">INÍCIO</a></li>
-                    <li><a href="whoweare.html">QUEM SOMOS</a></li>
-                    <li><a href="passageiro.html">PASSAGEIRO</a></li>
-                    <li><a href="motorista.html">MOTORISTA</a></li>
-                    <li><a href="faq.html">AJUDA</a></li>
-                    <li><a href="recommendations.html">RECOMENDAÇÕES</a></li>
-                    <li><a href="faleconosco.html">FALE CONOSCO</a></li>
+                    <li><a href="#">QUEM SOMOS</a></li>
+                    <li><a href="#">PASSAGEIRO</a></li>
+                    <li><a href="#">MOTORISTA</a></li>
+                    <li><a href="#">AJUDA</a></li>
+                    <li><a href="#">RECOMENDAÇÕES</a></li>
+                    <li><a href="#">FALE CONOSCO</a></li>
                     <li><a href="calladriver.html">PEDIR CORRIDA</a></li>
                 </ul>
             </nav>
@@ -56,15 +56,15 @@
 
                 <div class="form-check">
                     <label id="labelGender" for="gender">Gênero</label><br>
-                    <input class="form-check-input" name="mot_gender" type="radio" id="flexRadio1" required>
+                    <input class="form-check-input" name="gender" type="radio" id="flexRadio1" required>
                     <label class="form-check-label" for="flexRadio1">Feminino</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" name="mot_gender" type="radio" id="flexRadio2" required>
+                    <input class="form-check-input" name="gender" type="radio" id="flexRadio2" required>
                     <label class="form-check-label" for="flexRadio2">Masculino</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" name="mot_gender" type="radio" id="flexRadio3" required>
+                    <input class="form-check-input" name="gender" type="radio" id="flexRadio3" required>
                     <label class="form-check-label" for="flexRadio3">Não informar</label>
                 </div>
                 <br>
@@ -146,7 +146,7 @@
                     </div>
                     <br>
                     <div class="form-dados">
-                        <label id="labelPassword" for="password">Senha*</label><br>
+                        <label id="labelPassword" for="password">Senha</label><br>
                         <input class="form-control" type="password" id="password" name="password"
                             aria-describedby="senhaaux" required>
                         <i class="fa fa-eye" aria-hidden="true"></i>
@@ -158,7 +158,7 @@
                     </div>
                     <br>
                     <div class="form-dados">
-                        <label id="labelConfirm" for="confirmPassword">Confirmar Senha*</label><br>
+                        <label id="labelConfirm" for="confirmPassword">Confirmar Senha</label><br>
                         <input class="form-control" type="password" id="confirmPassword" name="confirmPassword"
                             aria-describedby="senhaaux" required>
                         <i id="passwordView" class="fa fa-eye" aria-hidden="true"></i>
@@ -176,7 +176,7 @@
                 </div>
                 <br>
                 <div class="botoes">
-                    <button onclick='cadastrarDriver()' class="botaoEnviar" id="submitButtonMotorista" 
+                    <button onclick='cadastrarDriver()' class="botao-enviar" id="submitButtonMotorista" 
                     type="submit">Finalizar cadastro</button>
                 </div>
                 <br><br>
@@ -190,13 +190,24 @@
                             <a href="index.html">Início</a>
                         </li>
                         <li>
-                            <a href="whoweare.html">Quem somos</a>
+                            <a href="#">Quem somos</a>
                         </li>
                         <li>
-                            <a href="faleconosco.html">Fale conosco</a>
+                            <a href="#">Fale conosco</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <ul>
+                        <li>
+                            <a href="#">Termos e Condições</a>
                         </li>
                         <li>
-                            <a href="faq.html">Ajuda</a>
+                            <a href="#">Políticas de privacidade</a>
+                        </li>
+                        <li>
+                            <a href="#">Ajuda</a>
                         </li>
                     </ul>
                 </div>

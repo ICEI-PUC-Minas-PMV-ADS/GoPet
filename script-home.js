@@ -55,18 +55,7 @@ function loginTutor(){
             userValid = {
                 nome: item.nameCad,
                 user: item.emailCad,
-                senha: item.passwordCad,
-                confirmacaoSenha: item.confirmPasswordCad,
-                dataNascimento: item.birthdayCad,
-                cpf: item.cpfCad,
-                cep: item.cepCad,
-                endereco: item.addressCad,
-                numero: item.houseNumberCad,
-                complemento: item.complementCad,
-                bairro: item.neighborhoodCad,
-                cidade: item.cityCad,
-                estado: item.stateCad,
-                celular: item.cellphoneCad
+                senha: item.passwordCad
             }
         }
     })
@@ -75,10 +64,10 @@ function loginTutor(){
         window.location.href = 'areadotutor.html'
         errorMsg.setAttribute('style', 'display:none')
         errorMsg.innerHTML = ''
-        let tokenP = Math.random().toString(16).substr(2) + Math.random().toString(16).substr(2)
-        sessionStorage.setItem('tokenP', tokenP)
+        let token = Math.random().toString(16).substr(2) + Math.random().toString(16).substr(2)
+        localStorage.setItem('token', token)
 
-        sessionStorage.setItem('userLogadoP', JSON.stringify(userValid))
+        localStorage.setItem('userLogadoP', JSON.stringify(userValid))
 
     }else{
         errorMsg.setAttribute('style', 'display:block')
@@ -112,22 +101,7 @@ function loginDriver(){
             userValidDriver = {
                 nome: item.nameCad,
                 user: item.emailCad,
-                senha: item.passwordCad,
-                confirmacaoSenha: item.confirmPasswordCad,
-                dataNascimento: item.birthdayCad,
-                cpf: item.cpfCad,
-                cnh: item.cnhCad,
-                cep: item.cepCad,
-                endereco: item.addressCad,
-                numero: item.houseNumberCad,
-                complemento: item.complementCad,
-                bairro: item.neighborhoodCad,
-                cidade: item.cityCad,
-                estado: item.stateCad,
-                celular: item.cellphoneCad,
-                modelo: item.modelCad,
-                cor: item.colorCad,
-                placa: item.plaqueCad
+                senha: item.passwordCad
             }
         }
     })
@@ -137,35 +111,14 @@ function loginDriver(){
         window.location.href = 'areadomotorista.html'
         errorMsg2.setAttribute('style', 'display:none')
         errorMsg2.innerHTML = ''
-        
-        let tokenM = Math.random().toString(16).substr(2) + Math.random().toString(16).substr(2)
-        sessionStorage.setItem('tokenM', tokenM)
+        let token = Math.random().toString(16).substr(2) + Math.random().toString(16).substr(2)
+        localStorage.setItem('token', token)
 
-        sessionStorage.setItem('userLogadoM', JSON.stringify(userValidDriver))
+        localStorage.setItem('userLogadoM', JSON.stringify(userValidDriver))
 
     }else{
         errorMsg2.setAttribute('style', 'display:block')
         errorMsg2.innerHTML = '<strong>O e-mail e/ou a senha estão incorretos</strong>'
         usernameDriver.focus()
     }
-}
-
-function recuperarSenha(){
-    let modal = document.querySelector('.modal')
-    modal.style.display = 'block';
-}
-
-function fechar(){
-    let modal = document.querySelector('.modal')
-    modal.style.display = 'none';
-}
-
-function recuperarSenha2(){
-    let modal2 = document.querySelector('.modal2')
-    modal2.style.display = 'block';
-}
-
-function fechar2(){
-    let modal2 = document.querySelector('.modal2')
-    modal2.style.display = 'none';
 }

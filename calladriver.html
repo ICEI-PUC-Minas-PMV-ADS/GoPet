@@ -3,21 +3,20 @@
 
 <head>
   <link href="style-calladriver.css" rel="stylesheet" type="text/css" media="screen" />
-  <link rel="stylesheet" type="text/css" href="style-map.css">
   <meta name="description" content="Agendamento de corridas de pets">
   <meta name="keywords" content="Pet, agendamento, agendamento online, corrida">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
   <title>Go Pet - Solicite sua corrida</title>
+  <script src="script-calladriver.js"></script>
 </head>
 
 <body>
   <div id="root">
     <header>
       <nav>
-        <a class="logo" href="index.html">GoPet</a>
+        <a class="logo" href="/">GoPet</a>
         <div class="mobile-menu">
           <div class="line1"></div>
           <div class="line2"></div>
@@ -25,12 +24,12 @@
         </div>
         <ul class="nav-list">
           <li><a href="index.html">INÍCIO</a></li>
-          <li><a href="whoweare.html">QUEM SOMOS</a></li>
-          <li><a href="passageiro.html">PASSAGEIRO</a></li>
-          <li><a href="motorista.html">MOTORISTA</a></li>
-          <li><a href="faq.html">AJUDA</a></li>
-          <li><a href="recommendations.html">RECOMENDAÇÕES</a></li>
-          <li><a href="faleconosco.html">FALE CONOSCO</a></li>
+          <li><a href="#">QUEM SOMOS</a></li>
+          <li><a href="#">PASSAGEIRO</a></li>
+          <li><a href="#">MOTORISTA</a></li>
+          <li><a href="#">AJUDA</a></li>
+          <li><a href="#">RECOMENDAÇÕES</a></li>
+          <li><a href="#">FALE CONOSCO</a></li>
           <li><a href="calladriver.html">PEDIR CORRIDA</a></li>
         </ul>
       </nav>
@@ -52,8 +51,8 @@
         </div>
         <br>
         <div id="inputSection" class="inputSection">
-          <input id="origin" type="text" name="origin"  class="inputCallADriver" required/>
-          <input id="destination" type="text" name="destination" class="inputCallADriver" required/>
+          <input id="origin" type="text" name="origin" placeholder="Origem" class="inputCallADriver" />
+          <input id="destination" type="text" name="origin" placeholder="Destino*" class="inputCallADriver" />
         </div>
         <div id="selectYourPet">
           <h1 style="padding: 8px 0; font-size: 24px;">Selecione o(s) seu(s) pet(s):</h1>
@@ -69,7 +68,7 @@
                 </select>
 
                 <label>Pet 2:</label>
-                <select class="inputSelect" name="selectPets" id="petSelect2">
+                <select class="inputSelect" name="selectPets" id="petSelect2" onblur="valideFields()">
                   <option value="">SELECIONE OUTRO PET</option>
                   <option value="Malu">Malu</option>
                   <option value="Bob">Bob</option>
@@ -77,7 +76,7 @@
                 </select>
               </div>
               <div id="container_right" class="container_right">
-                <button id="btn_call_driver" class="btnOrange" onclick='callADriver()'>
+                <button id="btn_call_driver" class="btnOrange" onClick="callADriver()">
                   Solicitar corrida
                 </button>
               </div>
@@ -85,36 +84,45 @@
           </div>
         </div>
 
-        <div id="map"></div>
+        <div id="petMap" class="petMap">
+          <img src="assets/img/mapimg.png" id=petImage alt="Mapa de exemplo">
+        </div>
       </div>
     </div>
     <footer>
       <div class="links_section">
-          <div class="mot_links">
-              <ul>
-                  <li>
-                      <a href="index.html">Início</a>
-                  </li>
-                  <li>
-                      <a href="whoweare.html">Quem somos</a>
-                  </li>
-                  <li>
-                      <a href="faleconosco.html">Fale conosco</a>
-                  </li>
-                  <li>
-                      <a href="faq.html">Ajuda</a>
-                  </li>
-              </ul>
-          </div>
+        <div>
+          <ul>
+            <li>
+              <a href="index.html">Início</a>
+            </li>
+            <li>
+              <a href="#">Quem somos</a>
+            </li>
+            <li>
+              <a href="#">Fale conosco</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <ul>
+            <li>
+              <a href="#">Termos e Condições</a>
+            </li>
+            <li>
+              <a href="#">Políticas de privacidade</a>
+            </li>
+            <li>
+              <a href="#">Ajuda</a>
+            </li>
+          </ul>
+        </div>
       </div>
-  </footer>
+
+    </footer>
   </div>
   <script type="text/javascript" src="mobile-navbar.js"></script>
-  <script src="script-map.js"></script>
-  <script src="script-calladriver.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA017yolnkWKAkqxdOjG5ETS-KZNoHZink&callback=initMap"
-        async defer defer></script>
-   
 </body>
 
 </html>

@@ -77,6 +77,22 @@ let validConfirm = false
 let photoDriver = document.querySelector('#flImage')
 let validDriver = false
 
+/*let photoCadastro = document.getElementById('#photoCadastro');
+let photoData = getBase64Photo(tutorPhoto); 
+localStorage.setItem("photoData", photoData);
+
+function getBase64Photo(picture) {
+    var tutorPhoto = document.createElement("photoCadastro");
+    tutorPhoto.width = picture.width;
+    tutorPhoto.height = picture.height;
+
+    var ctx = tutorPhoto.getContext("2d");
+    ctx.drawPhoto(picture, 0, 0);
+
+    var dataURL = tutorPhoto.toDataURL("picture/png");
+
+    return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+}*/
 
 names.addEventListener('keyup', ()=>{
     if(names.value.length <= 10){
@@ -301,7 +317,6 @@ function cadastrarDriver(){
                     birthdayCad: birthday.value,
                     emailCad: email.value,
                     cpfCad: cpf.value,
-                    cnhCad: cnh.value,
                     cepCad: cep.value,
                     addressCad: address.value,
                     houseNumberCad: houseNumber.value,
@@ -313,8 +328,7 @@ function cadastrarDriver(){
                     modelCad: model.value,
                     colorCad: color.value,
                     plaqueCad: plaque.value,
-                    passwordCad: password.value,
-                    confirmPasswordCad: confirmPassword.value
+                    passwordCad: password.value
                 }
             )
 

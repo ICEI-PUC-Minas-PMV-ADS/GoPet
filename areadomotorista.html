@@ -7,14 +7,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
-    <title>GoPet - Área do(a) Motorista</title>
+    <title>GoPet - Cadastro do(a) Motorista</title>
 </head>
 
 <body>
     <div class="wrapper">
         <header>
             <nav>
-                <a class="logo" href="index.html">GoPet</a>
+                <a class="logo" href="/">GoPet</a>
                 <div class="mobile-menu">
                     <div class="line1"></div>
                     <div class="line2"></div>
@@ -22,25 +22,25 @@
                 </div>
                 <ul class="nav-list">
                     <li><a href="index.html">INÍCIO</a></li>
-                    <li><a href="whoweare.html">QUEM SOMOS</a></li>
-                    <li><a href="passageiro.html">PASSAGEIRO</a></li>
-                    <li><a href="motorista.html">MOTORISTA</a></li>
-                    <li><a href="faq.html">AJUDA</a></li>
-                    <li><a href="recommendations.html">RECOMENDAÇÕES</a></li>
-                    <li><a href="faleconosco.html">FALE CONOSCO</a></li>
+                    <li><a href="#">QUEM SOMOS</a></li>
+                    <li><a href="#">PASSAGEIRO</a></li>
+                    <li><a href="#">MOTORISTA</a></li>
+                    <li><a href="#">AJUDA</a></li>
+                    <li><a href="#">RECOMENDAÇÕES</a></li>
+                    <li><a href="#">FALE CONOSCO</a></li>
                     <li><a href="calladriver.html">PEDIR CORRIDA</a></li>
                 </ul>
             </nav>
         </header>
 
         <div class="title">
-            <h1 id="title"></h1>
+            <h1>Cadastro do(a) Motorista</h1>
             <div id="errorMsg"></div>
             <div id="successMsg"></div>
         </div>
 
         <div class="photos">
-            <img src="assets/img/agostinho.jpg" class="photoCadastro" id="photoCadastro"
+            <img src="assets/img/tutor.png" class="photoCadastro" id=photoCadastro
                 alt="Selecione a foto do motorista"><br><br>
             <input class="form-control" type="file" id="flImage" accept="image/*">
         </div>
@@ -53,9 +53,24 @@
                     <br>
                 </div>
                 <br>
+
+                <div class="form-check">
+                    <label id="labelGender" for="gender">Gênero</label><br>
+                    <input class="form-check-input" name="gender" type="radio" id="flexRadio1" required>
+                    <label class="form-check-label" for="flexRadio1">Feminino</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" name="gender" type="radio" id="flexRadio2" required>
+                    <label class="form-check-label" for="flexRadio2">Masculino</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" name="gender" type="radio" id="flexRadio3" required>
+                    <label class="form-check-label" for="flexRadio3">Não informar</label>
+                </div>
+                <br>
                 <div class="form-dados">
                     <label id="labelBirthday" for="birthday">Data de nascimento*</label><br>
-                    <input class="form-control" type="date" id="birthday" name="bdate" disabled>
+                    <input class="form-control" type="date" id="birthday" name="bdate" placeholder="__/__/____" disabled>
                 </div>
                 <br>
                 <div class="form-dados">
@@ -152,19 +167,20 @@
                     <div class="form-dados">
                         <label id="labelCapacity" for="listaPorte">Porte do animal que tem capacidade de transportar*</label><br>
                         <select id="capacity" name="capacity" class="form-control" aria-label="Porte do animal" required>
-                            <option selected class="form-dados">Grande</option>
+                            <option selected class="form-dados">Escolha uma opção</option>
                             <option value="1">Pequeno</option>
                             <option value="2">Médio</option>
+                            <option value="3">Grande</option>
                         </select>
                     </div>
                 </div>
                 <br>
                 <div class="botoes">
-                    <button onclick='salvarAlteracoes()' class="botaoSalvar" id="submitButtonSave" 
-                    type="submit">Salvar alterações</button>
+                    <button onclick='cadastrarDriver()' class="botao-salvar" id="submitButtonSave" 
+                    type="submit">Salvar</button>
                 </div>
                 <div class="botoes">
-                    <button onclick='sair()' class="botaoSair" id="submitButtonLogout" 
+                    <button onclick='sair()' class="botao-sair" id="submitButtonLogout" 
                     type="submit">Sair</button>
                 </div> 
                 <br><br>
@@ -178,13 +194,24 @@
                             <a href="index.html">Início</a>
                         </li>
                         <li>
-                            <a href="whoweare.html">Quem somos</a>
+                            <a href="#">Quem somos</a>
                         </li>
                         <li>
-                            <a href="faleconosco.html">Fale conosco</a>
+                            <a href="#">Fale conosco</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <ul>
+                        <li>
+                            <a href="#">Termos e Condições</a>
                         </li>
                         <li>
-                            <a href="faq.html">Ajuda</a>
+                            <a href="#">Políticas de privacidade</a>
+                        </li>
+                        <li>
+                            <a href="#">Ajuda</a>
                         </li>
                     </ul>
                 </div>

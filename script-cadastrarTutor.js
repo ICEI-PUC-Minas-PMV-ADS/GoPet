@@ -57,7 +57,23 @@ let validPassword = false
 let confirmPassword = document.querySelector('#confirmPassword')
 let labelConfirm = document.querySelector('#labelConfirm')
 let validConfirm = false
+/*
+let photoCadastro = document.getElementById('#photoCadastro');
+let photoData = getBase64Photo(photoCadastro); 
+localStorage.setItem("photoData", photoData);
 
+function getBase64Photo(picture) {
+    var tutorPhoto = document.createElement("tutorPhoto");
+    tutorPhoto.width = picture.width;
+    tutorPhoto.height = picture.height;
+
+    var ctx = tutorPhoto.getContext("2d");
+    ctx.drawPhoto(picture, 0, 0);
+
+    var dataURL = tutorPhoto.toDataURL("picture/png");
+
+    return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+}*/
 
 names.addEventListener('keyup', ()=>{
     if(names.value.length <= 10){
@@ -236,8 +252,7 @@ function cadastrarTutor(){
                     cityCad: city.value,
                     stateCad: state.value,
                     cellphoneCad: cellphone.value,
-                    passwordCad: password.value,
-                    confirmPasswordCad: confirmPassword.value
+                    passwordCad: password.value
                 }
             )
 
