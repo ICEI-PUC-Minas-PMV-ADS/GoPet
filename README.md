@@ -38,8 +38,9 @@ Os aplicativos de mobilidade urbana comumente utilizados não possuem a obrigato
 <li><a href="docs/07-Programação de Funcionalidades.md"> Programação de Funcionalidades</a></li>
 <li><a href="docs/08-Plano de Testes de Software.md"> Plano de Testes de Software</a></li>
 <li><a href="docs/09-Registro de Testes de Software.md"> Registro de Testes de Software</a></li>
-<li><a href="docs/10-Apresentação do Projeto.md"> Apresentação do Projeto</a></li>
-<li><a href="docs/11-Referências.md"> Referências</a></li>
+<li><a href="docs/10-Conclusão.md"> Conclusão</a></li>
+<li><a href="docs/11-Apresentação do Projeto.md"> Apresentação do Projeto</a></li>
+<li><a href="docs/12-Referências.md"> Referências</a></li>
 </ol>
 
 # Código
