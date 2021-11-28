@@ -12,6 +12,9 @@ let validPet1 = false
 let pet2 = document.querySelector('#petSelect2')
 let validPet2= false
 
+let payment = document.querySelector('#payment')
+let validPayment= false
+
 let agendamento = document.querySelector('#appointment_date')
 let validAgendamento = false
 
@@ -38,12 +41,12 @@ destination.addEventListener('keyup', ()=>{
 })
 
 function callADriver(){
-    if(validOrigin && validDestination && (pet1.value || pet2.value) && appointment_date.value.length <1){
+    if(validOrigin && validDestination && (pet1.value || pet2.value) && appointment_date.value.length <1 && payment.value){
         window.location.href = 'corrida.html'
-    }else if(validOrigin && validDestination && (pet1.value || pet2.value) && appointment_date.value.length >1){
+    }else if(validOrigin && validDestination && (pet1.value || pet2.value) && appointment_date.value.length >1 && payment.value){
         alert("A sua corrida foi agendada. As instruções serão enviadas por e-mail.")
     }else{
-        alert('Preencha a origem, o destino e escolha pelo menos um pet!')
+        alert('Preencha a origem, o destino, o método de pagamento e escolha pelo menos um pet!')
     }
 }
 

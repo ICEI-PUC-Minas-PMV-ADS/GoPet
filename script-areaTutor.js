@@ -37,3 +37,12 @@ function salvarAlteracoes(){
     alert('Os dados foram alterados com sucesso!')
 }
 
+function cadastrarCartao(){
+    let modal = document.querySelector('.modal3')
+    modal.style.display = 'block';
+}
+
+function fechar3(){
+    let modal = document.querySelector('.modal3')
+    modal.style.display = 'none';
+}

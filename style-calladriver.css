@@ -137,6 +137,11 @@
     color: white;
     font-size: 18px;
     align-self: center;
+    cursor: pointer;
+}
+
+.btnOrange:hover{
+    background-color: orangered;
 }
 
 @media screen and (min-width: 600px) {

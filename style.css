@@ -11,6 +11,10 @@ p{
     margin-top: 65px;
 }
 
+.form-dados > input{
+    height: 20px;
+}
+
 body {
     background-color: #FFFAFA;
 }
@@ -45,7 +49,19 @@ body {
     width: 120px;
 }
 
-.botaoEnviar:hover, .botaoSair:hover, .botaoSalvar:hover, .botaoPet:hover{
+.botaoCartao{
+    height: 40px;
+    background-color: #FF9052;
+    color:white;
+    font-weight: bold;
+    border: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+    width: 180px;
+}
+
+.botaoEnviar:hover, .botaoSair:hover, .botaoSalvar:hover, .botaoPet:hover, .botaoCartao:hover{
     background-color: orangered;
     color: white;
 }
@@ -602,6 +618,40 @@ header{
     cursor: pointer;
 }
 
+/* modal cadastrar método de pagamento */
+
+.modal3{
+    width: 30%;
+    background-color: #4F4F4F;
+    border-radius: 5px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    display: none;
+    animation: animate;
+    animation-duration: 800ms;
+}
+
+.dadosCartao > .form-dados > label, .dadosCartao > .form-check > label{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: small;
+}
+
+.dadosCartao{
+    padding: 50px;
+    padding-bottom: 0;
+}
+
+.dadosCartao > .form-dados > input{
+    width: 100%;
+}
+
+.botaoCadastroCartao{
+    text-align: center;
+}
+
 @keyframes animate{
     from{opacity: 1;}
     from{opacity: 0;}
@@ -657,7 +707,15 @@ header{
     margin-bottom: 5%;
 }
 
-.botaoEnviarEmail:hover{
+.botaoCadastrarCartao{
+    background-color: #976DD0;
+    border: none;
+    border-radius: 3px;
+    color: #FFFAFA;
+    margin-bottom: 5%;
+}
+
+.botaoEnviarEmail:hover, .botaoCadastrarCartao:hover{
     background-color: purple;
     color: #FFFAFA;
     transition: .3s;
@@ -674,6 +732,9 @@ header{
 @media (max-width: 700px){
     .modal, .modal2{
         width:80%;
+    }
+    .modal3{
+        width: 85%;
     }
 }
 

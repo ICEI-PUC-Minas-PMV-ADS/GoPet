@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
-    <title>GoPet - Área do(a) Tutor(a)</title>
+    <title>Go Pet - Área do(a) Tutor(a)</title>
 </head>
 
 <body>
@@ -43,6 +43,50 @@
             <img src="assets/img/perfiltutor.JPG" class="photoCadastro" id=photoCadastro
                 alt="Selecione a foto do tutor"><br><br>
             <input class="form-control" type="file" id="flImage" accept="image/*">
+            <div class="cadastrarCartao">
+                <div class="botoes">
+                    <button onclick="cadastrarCartao()" class="botaoCartao" id="cadastrarCartao" type="submit">Cadastrar
+                        método de pagamento</button>
+                </div>
+                <div class="modal3">
+                    <div onclick="fechar3()" class="fechar">
+                        <label class="labelX">x</label>
+                    </div>
+                    <div class="dadosCartao">
+                        <div class="form-dados">
+                            <label id="labelNomeCartao" for="Cartao">Nome no cartão</label><br>
+                            <input class="form-control" type="text" id="nomeCartao" name="nomeCartao">
+                        </div>
+                        <div class="form-dados">
+                            <label id="labelNumeroCartao" for="Cartao">Número do cartão</label><br>
+                            <input class="form-control" type="text" id="ncartao" name="nCartao">
+                        </div>
+                        <div class="form-dados">
+                            <label id="labelValidadeCartao" for="Cartao">Data de validade</label><br>
+                            <input class="form-control" type="text" id="validade" name="validade" placeholder="MM/AA">
+                        </div>
+                        <div class="form-dados">
+                            <label id="labelCVV" for="Cartao">CVV</label><br>
+                            <input class="form-control" type="text" id="CVV" name="CVV">
+                        </div>
+                        <br>
+                        <div class="form-check">
+                            <input class="form-check-input" name="tipoCartao" type="radio" id="cartaoCredito">
+                            <label class="form-check-label" for="feminino">Cartão de crédito</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" name="tipoCartao" type="radio" id="cartaoDebito">
+                            <label class="form-check-label" for="masculino">Cartão de débito</label>
+                        </div>
+                    </div>
+                    
+                    <div class="botaoCadastroCartao">
+                        <button onclick="fechar3()" class="botaoCadastrarCartao" id="botaoCadastrarCartao"
+                            type="submit">Cadastrar cartão
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="contentRegistration">
@@ -130,17 +174,16 @@
                 </div>
                 <br>
                 <div class="botoes">
-                    <button onclick="window.location.href='cadastropet.html'" class="botaoPet" id="submitButtonPet" 
-                    type="submit">Cadastrar Pet</button>
+                    <button onclick="window.location.href='cadastropet.html'" class="botaoPet" id="submitButtonPet"
+                        type="submit">Cadastrar Pet</button>
                 </div>
                 <div class="botoes">
-                    <button onclick='salvarAlteracoes()' class="botaoSalvar" id="submitButtonSave" 
-                    type="submit">Salvar alterações</button>
+                    <button onclick='salvarAlteracoes()' class="botaoSalvar" id="submitButtonSave" type="submit">Salvar
+                        alterações</button>
                 </div>
                 <div class="botoes">
-                    <button onclick='sair()' class="botaoSair" id="submitButtonLogout" 
-                    type="submit">Sair</button>
-                </div> 
+                    <button onclick='sair()' class="botaoSair" id="submitButtonLogout" type="submit">Sair</button>
+                </div>
                 <br><br>
             </div>
         </div>

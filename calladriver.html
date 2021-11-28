@@ -35,7 +35,6 @@
         </ul>
       </nav>
     </header>
-
     <div class="container">
       <div class="content">
         <div id="whereYouWantToGo" class="whereYouWantToGo">
@@ -75,6 +74,15 @@
                   <option value="Bob">Bob</option>
                   <option value="Nina">Nina</option>
                 </select>
+                <br>
+                <label>Método de pagamento:</label>
+                <select class="inputSelect" name="selectPayments" id="payment">
+                  <option value="">SELECIONE O MÉTODO DE PAGAMENTO</option>
+                  <option value="cartaoCredito">Cartão de crédito</option>
+                  <option value="cartaoDebito">Cartão de débito</option>
+                  <option value="Dinheiro">Dinheiro</option>
+                </select>
+
               </div>
               <div id="container_right" class="container_right">
                 <button id="btn_call_driver" class="btnOrange" onclick='callADriver()'>
