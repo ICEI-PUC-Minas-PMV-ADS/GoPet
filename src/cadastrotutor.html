@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>Go Pet - Cadastro do(a) Tutor(a)</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <a class="logo" href="index.html">GoPet</a>
+                <div class="mobile-menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="index.html">INÍCIO</a></li>
+                    <li><a href="whoweare.html">QUEM SOMOS</a></li>
+                    <li><a href="passageiro.html">PASSAGEIRO</a></li>
+                    <li><a href="motorista.html">MOTORISTA</a></li>
+                    <li><a href="faq.html">AJUDA</a></li>
+                    <li><a href="recommendations.html">RECOMENDAÇÕES</a></li>
+                    <li><a href="faleconosco.html">FALE CONOSCO</a></li>
+                    <li><a href="calladriver.html">PEDIR CORRIDA</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="title">
+            <h1>Cadastro do(a) Tutor(a)</h1><br>
+            <div id="errorMsg"></div>
+            <div id="successMsg"></div>
+        </div>
+
+        <div class="photos">
+            <img src="assets/img/tutor.png" class="photoCadastro" id=photoCadastro
+                alt="Selecione a foto do tutor"><br><br>
+            <input class="form-control" type="file" id="flImage" accept="image/*">
+        </div>
+
+        <div class="contentRegistration">
+            <div class="formCadastro" name="cadastroTutor" id="registrationForm">
+                <div class="form-dados">
+                    <label id="labelName" for="nome">Nome completo*</label><br>
+                    <input class="form-control" type="text" id="name" name="username" required>
+                    <br>
+                </div>
+                <br>
+
+                <div class="form-check">
+                    <label id="labelGender" for="gender">Gênero</label><br>
+                    <input class="form-check-input" name="gender" type="radio" id="feminino" required>
+                    <label class="form-check-label" for="feminino">Feminino</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" name="gender" type="radio" id="masculino" required>
+                    <label class="form-check-label" for="masculino">Masculino</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" name="gender" type="radio" id="naoInformar" required>
+                    <label class="form-check-label" for="masculino">Não informar</label>
+                </div>
+                <br>
+                <div class="form-dados">
+                    <label id="labelBirthday" for="birthday">Data de nascimento*</label><br>
+                    <input class="form-control" type="date" id="birthday" name="bdate" placeholder="__/__/____"
+                        required>
+                </div>
+                <br>
+                <div class="form-dados">
+                    <label id="labelEmail" for="email">E-mail*</label><br>
+                    <input class="form-control" type="email" id="email" name="email" placeholder="exemplo@gopet.com.br"
+                        required>
+                </div>
+                <br>
+                <div class="form-dados">
+                    <label id="labelCpf" for="CPF">CPF*</label><br>
+                    <input class="form-control" type="number" id="CPF" name="cpf" placeholder="___.___.___-__" required>
+                </div>
+                <br>
+                <div class="form-dados">
+                    <label id="labelCep" for="CEP">CEP*</label><br>
+                    <input class="form-control" type="number" id="CEP" name="cep" placeholder="_____-___" required>
+                </div>
+                <br>
+                <div class="form-dados">
+                    <label id="labelAddress" for="logradouro">Logradouro*</label><br>
+                    <input class="form-control" type="text" id="address" name="address" required>
+                </div>
+                <br>
+                <div class="form-dados">
+                    <label id="labelNumber" for="numero-casa">Número*</label><br>
+                    <input class="form-control" type="number" id="houseNumber" name="housenumber" required>
+                </div>
+                <br>
+                <div class="form-dados">
+                    <label id="labelComplement" for="complemento">Complemento</label><br>
+                    <input class="form-control" type="text" id="complement" name="complement">
+                </div>
+                <br>
+                <div class="form-dados">
+                    <label id="labelNeighborhood" for="bairro">Bairro*</label><br>
+                    <input class="form-control" type="text" id="neighborhood" name="neighborhood" required>
+                </div>
+                <br>
+                <div class="form-dados">
+                    <label id="labelCity" for="cidade">Cidade*</label><br>
+                    <input class="form-control" type="text" id="city" name="city" required>
+                </div>
+                <br>
+                <div class="form-dados">
+                    <label id="labelState" for="estado">Estado (sigla)*</label><br>
+                    <input class="form-control" type="text" id="state" name="state" required>
+                </div>
+                <br>
+                <div class="form-dados">
+                    <label id="labelCellphone" for="celular">Celular com DDD*</label><br>
+                    <input class="form-control" type="number" id="cellphone" name="cellphone" required>
+                </div>
+                <br>
+                <div class="form-dados">
+                    <label id="labelPassword" for="password">Senha*</label><br>
+                    <input class="form-control" type="password" id="password" name="password"
+                        aria-describedby="senhaaux" required>
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                </div>
+                <div class="form-dados">
+                    <span class="form-text-aux" id="senhaaux">
+                        A senha deve ter no mínimo 8 caracteres.
+                    </span>
+                </div>
+                <br>
+                <div class="form-dados">
+                    <label id="labelConfirm" for="confirmPassword">Confirmar senha*</label><br>
+                    <input class="form-control" type="password" id="confirmPassword" name="confirmPassword"
+                        aria-describedby="senhaaux" required>
+                    <i id="passwordView" class="fa fa-eye" aria-hidden="true"></i>
+                </div>
+                <br>
+                <div class="botoes">
+                    <button onclick='cadastrarTutor()' href ="index.html" class="botaoEnviar" id="submitButtonTutor" 
+                    type="submit">Finalizar cadastro</button>
+                </div>
+                <br><br>
+            </div>
+        </div>
+        <footer>
+            <div class="links_section">
+                <div>
+                    <ul>
+                        <li>
+                            <a href="index.html">Início</a>
+                        </li>
+                        <li>
+                            <a href="whoweare.html">Quem somos</a>
+                        </li>
+                        <li>
+                            <a href="faleconosco.html">Fale conosco</a>
+                        </li>
+                        <li>
+                            <a href="faq.html">Ajuda</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </footer>
+
+    </div>
+    <script type="text/javascript" src="script-registration.js"></script>
+    <script type="text/javascript" src="mobile-navbar.js"></script>
+    <script type="text/javascript" src="script-cadastrarTutor.js"></script>
+</body>
+
+</html>
