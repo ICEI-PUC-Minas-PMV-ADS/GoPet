@@ -1,10 +1,10 @@
 # Instruções de utilização
 
-1 - Deve-se acessar o site https://icei-puc-minas-pmv-ads.github.io/GoPet/ no navegador;
-2 - Pode-se navegar entre as páginas do menu;
-3 - Na tela inicial, é possível criar um cadastro como Passageiro ou como Motorista;
-4 - Após a criação do cadastro, o usuário deve realizar o login na página inicial para acessar as informações cadastradas;
-5 - Se o login for realizado como Passageiro, será possível cadastrar o pet;
+1 - Deve-se acessar o site https://icei-puc-minas-pmv-ads.github.io/GoPet/ no navegador;<br> 
+2 - Pode-se navegar entre as páginas do menu;<br> 
+3 - Na tela inicial, é possível criar um cadastro como Passageiro ou como Motorista;<br> 
+4 - Após a criação do cadastro, o usuário deve realizar o login na página inicial para acessar as informações cadastradas;<br> 
+5 - Se o login for realizado como Passageiro, será possível cadastrar o pet; <br>
 6 - A corrida pode ser solicitada ao clicar em "Pedir Corrida"
 
 ## Instalação do Site
